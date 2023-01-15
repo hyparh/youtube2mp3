@@ -20,11 +20,12 @@ app.use(express.urlencoded({
 app.use(express.json());
 
 app.get("/", (req, res) => {
-    res.send("Hello World");
+    res.render("index");
 });
 
-app.post("/", (req, res) => {
-    
+app.post("/convert-mp3", async (req, res) => {
+    const videoId = req.body.videoID;
+    console.log(videoId);
 });
 
 //start the server
